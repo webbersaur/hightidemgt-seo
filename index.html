@@ -62,7 +62,7 @@
   <tr><td>Schema Markup</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Heading Structure</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Image Optimization</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Content Depth</td><td><span class="badge badge-fair">Fair</span></td></tr>
+  <tr><td>Content Depth</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Internal Linking</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Core Web Vitals</td><td><span class="badge badge-fair">Fair</span></td></tr>
   <tr><td>Technical SEO</td><td><span class="badge badge-good">Good</span></td></tr>
@@ -74,19 +74,8 @@
 
 <h2>1. Remaining Issues</h2>
 
-<h3>1a. Homepage Content Still Thin (~409 words)</h3>
-<p>Homepage main content area is ~409 words. Target is 600+ for competitive ITAD keywords. Consider adding:</p>
-<ul>
-  <li>Service overview section with keyword-rich descriptions</li>
-  <li>Trust signals (certifications, years of experience, client count)</li>
-  <li>Service area details (Connecticut towns/cities served)</li>
-</ul>
-
-<h3>1b. Services Page Content Slightly Below Target (~710 words)</h3>
+<h3>1a. Services Page Content Slightly Below Target (~710 words)</h3>
 <p>Services page is at ~710 words, close to the 800+ target. Could benefit from slightly expanded service descriptions.</p>
-
-<h3>1c. Phone Number in H3 Tag (All Pages)</h3>
-<p>The phone number <code>(203) 687-9370</code> is still wrapped in an H3 in the site header. Phone numbers should use a <code>&lt;span&gt;</code> or <code>&lt;p&gt;</code> tag instead of a heading.</p>
 
 
 <hr>
@@ -108,13 +97,16 @@
   <tr><td>Lazy loading not enabled</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer</td></tr>
   <tr><td>Images not WebP</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer</td></tr>
   <tr><td>No caching plugin</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer configured</td></tr>
-  <tr><td>About Us thin content (was ~294 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~484 words</td></tr>
+  <tr><td>About Us thin content (was ~294 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~518 words</td></tr>
   <tr><td>Contact thin content (was ~55 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~337 words</td></tr>
   <tr><td>Images missing alt text (18+ across site)</td><td><span class="badge badge-good">Fixed</span> &mdash; all content images now have keyword-rich alt text</td></tr>
   <tr><td>CLS score 0.27 (Bad)</td><td><span class="badge badge-good">Improved</span> &mdash; now 0.12 (Needs Improvement, near Good). Fixed via child theme: header fixed positioning from first paint, row max-width critical CSS, font-display:swap, font preloading, affiliate font removal</td></tr>
   <tr><td>No external authority links on homepage</td><td><span class="badge badge-good">Fixed</span> &mdash; added links to R2 certification (sustainableelectronics.org), EPA e-waste recycling, and NIST SP 800-88 data destruction standards</td></tr>
   <tr><td>Same OG image on all pages</td><td><span class="badge badge-good">Fixed</span> &mdash; unique featured images set on all 8 main pages (Home, Services, About, Contact, and 4 service sub-pages)</td></tr>
   <tr><td>Empty blog page indexed</td><td><span class="badge badge-good">Fixed</span> &mdash; /blog/ page set to noindex/nofollow via Rank Math</td></tr>
+  <tr><td>Homepage thin content (was ~409 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~601 words. Replaced Lorem ipsum testimonial placeholders with real quotes, expanded intro, service details, and security process descriptions</td></tr>
+  <tr><td>Phone number in H3 tag (header)</td><td><span class="badge badge-good">Fixed</span> &mdash; changed to &lt;p&gt; tag via <code>et_module_shortcode_output</code> filter in child theme functions.php</td></tr>
+  <tr><td>About Us slightly below 500 words</td><td><span class="badge badge-good">Improved</span> &mdash; now ~518 words (was ~486)</td></tr>
 </table>
 
 <hr>
@@ -128,7 +120,7 @@
   <tr><td>Meta Desc</td><td>IT asset disposition Connecticut - High Tide offers certified ITAD, secure data destruction &amp; e-waste recycling...</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Canonical</td><td>https://hightidemgt.com/</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>H1</td><td>"IT Asset Disposition &amp; Data Destruction in Connecticut"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~409</td><td><span class="badge badge-needs-work">Low (target 600+)</span></td></tr>
+  <tr><td>Word Count</td><td>~601</td><td><span class="badge badge-good">Good (target 600+)</span></td></tr>
   <tr><td>OG Tags</td><td>Complete (title, desc, image, url)</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Schema</td><td>Place, ProfessionalService, Organization, WebSite, WebPage</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Images w/alt</td><td>5 of 5</td><td><span class="badge badge-good">All have alt text</span></td></tr>
@@ -151,7 +143,7 @@
   <tr><td>Title</td><td>Trusted ITAD Company Connecticut | 25+ Yrs Expert Service (57 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Meta Desc</td><td>High Tide is a trusted ITAD company Connecticut relies on for 25+ years...</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>H1</td><td>"Connecticut's Trusted ITAD &amp; Data Destruction Company"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~484</td><td><span class="badge badge-fair">Fair (target 500+)</span></td></tr>
+  <tr><td>Word Count</td><td>~518</td><td><span class="badge badge-good">Good (target 500+)</span></td></tr>
   <tr><td>Schema</td><td>ProfessionalService, AboutPage, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Images w/alt</td><td>1 of 1</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
@@ -216,10 +208,9 @@
 
 <h2>6. Priority Action Items</h2>
 <ol>
-  <li><strong>Expand homepage content</strong> &mdash; ~409 words, needs 600+ for competitive ITAD keywords</li>
-  <li><strong>Change phone number H3 to span/p</strong> &mdash; <code>(203) 687-9370</code> should not be a heading tag</li>
-  <li><strong>Bump About Us content slightly</strong> &mdash; ~484 words, just below 500 target</li>
+  <li><strong>Expand Services page content slightly</strong> &mdash; ~710 words, target 800+ for competitive keywords</li>
 </ol>
+<p>All critical and high-priority SEO issues have been resolved. The only remaining item is a minor content depth improvement on the Services page.</p>
 
 </body>
 </html>
