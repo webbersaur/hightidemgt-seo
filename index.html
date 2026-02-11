@@ -88,19 +88,6 @@
 <h3>1c. Phone Number in H3 Tag (All Pages)</h3>
 <p>The phone number <code>(203) 687-9370</code> is still wrapped in an H3 in the site header. Phone numbers should use a <code>&lt;span&gt;</code> or <code>&lt;p&gt;</code> tag instead of a heading.</p>
 
-<h3>1d. No External Authority Links on Homepage</h3>
-<p>The homepage only links externally to Google Reviews, LinkedIn, and the developer site. Consider adding links to industry authorities such as:</p>
-<ul>
-  <li>R2/RIOS certification bodies</li>
-  <li>EPA e-waste recycling guidelines</li>
-  <li>NIST data destruction standards</li>
-</ul>
-
-<h3>1e. Open Graph Image Same Across All Pages</h3>
-<p>Every page uses the same OG image (<code>HTMC1200.jpg</code>). Each page should have a unique, relevant image for better social sharing previews.</p>
-
-<h3>1f. Blog Page Exists but Has No Posts</h3>
-<p>The <code>/blog/</code> page is live and linked in navigation but contains zero posts and no H1 tag. Either publish blog content or remove the link to avoid a thin/empty page being indexed.</p>
 
 <hr>
 
@@ -125,6 +112,9 @@
   <tr><td>Contact thin content (was ~55 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~337 words</td></tr>
   <tr><td>Images missing alt text (18+ across site)</td><td><span class="badge badge-good">Fixed</span> &mdash; all content images now have keyword-rich alt text</td></tr>
   <tr><td>CLS score 0.27 (Bad)</td><td><span class="badge badge-good">Improved</span> &mdash; now 0.12 (Needs Improvement, near Good). Fixed via child theme: header fixed positioning from first paint, row max-width critical CSS, font-display:swap, font preloading, affiliate font removal</td></tr>
+  <tr><td>No external authority links on homepage</td><td><span class="badge badge-good">Fixed</span> &mdash; added links to R2 certification (sustainableelectronics.org), EPA e-waste recycling, and NIST SP 800-88 data destruction standards</td></tr>
+  <tr><td>Same OG image on all pages</td><td><span class="badge badge-good">Fixed</span> &mdash; unique featured images set on all 8 main pages (Home, Services, About, Contact, and 4 service sub-pages)</td></tr>
+  <tr><td>Empty blog page indexed</td><td><span class="badge badge-good">Fixed</span> &mdash; /blog/ page set to noindex/nofollow via Rank Math</td></tr>
 </table>
 
 <hr>
@@ -228,9 +218,6 @@
 <ol>
   <li><strong>Expand homepage content</strong> &mdash; ~409 words, needs 600+ for competitive ITAD keywords</li>
   <li><strong>Change phone number H3 to span/p</strong> &mdash; <code>(203) 687-9370</code> should not be a heading tag</li>
-  <li><strong>Add external authority links</strong> &mdash; link to R2/RIOS, EPA, NIST from homepage for topical authority</li>
-  <li><strong>Publish blog posts or remove /blog/ link</strong> &mdash; empty blog page with no H1 is a negative signal</li>
-  <li><strong>Set unique OG images per page</strong> &mdash; each page should have a relevant social sharing image</li>
   <li><strong>Bump About Us content slightly</strong> &mdash; ~484 words, just below 500 target</li>
 </ol>
 
