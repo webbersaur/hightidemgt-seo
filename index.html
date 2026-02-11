@@ -61,7 +61,7 @@
   <tr><td>Meta Tags &amp; Titles</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Schema Markup</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Heading Structure</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Image Optimization</td><td><span class="badge badge-poor">Poor</span></td></tr>
+  <tr><td>Image Optimization</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Content Depth</td><td><span class="badge badge-fair">Fair</span></td></tr>
   <tr><td>Internal Linking</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Core Web Vitals</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
@@ -74,17 +74,7 @@
 
 <h2>1. Remaining Issues</h2>
 
-<h3>1a. Most Images Still Missing Alt Text</h3>
-<table>
-  <tr><th>Page</th><th>Images</th><th>With Alt</th><th>Missing Alt</th></tr>
-  <tr><td>Home</td><td>5</td><td>2</td><td>3 (triangles.png, google-review, LinkedIn)</td></tr>
-  <tr><td>Services</td><td>12</td><td>2</td><td>10 (recycle-image, Servers, Computer-Chip, Desktop-and-Monitors, Storage-Solutions, Storage-Container, Merchandising, Dollar-sign + 2 footer)</td></tr>
-  <tr><td>About Us</td><td>3</td><td>1</td><td>2 (footer images)</td></tr>
-  <tr><td>Contact</td><td>5</td><td>2</td><td>3 (LinkedIn + 2 footer)</td></tr>
-</table>
-<p>This is the <strong>single biggest remaining SEO issue</strong>. Every content image needs keyword-rich, descriptive alt text for both accessibility and image search rankings.</p>
-
-<h3>1b. CLS Still at Threshold (0.25)</h3>
+<h3>1a. CLS Still at Threshold (0.25)</h3>
 <ul>
   <li>Measured CLS: <strong>0.25</strong> (improved from 0.27, but still borderline "Bad" &mdash; threshold is 0.25)</li>
   <li>Worst layout shift cluster: 1,696ms&ndash;3,076ms after page load (score: 0.248)</li>
@@ -92,7 +82,7 @@
   <li><strong>Fix:</strong> Preload critical fonts, add <code>font-display: swap</code>, reduce font count, consider removing affiliate plugin fonts</li>
 </ul>
 
-<h3>1c. Homepage Content Still Thin (~409 words)</h3>
+<h3>1b. Homepage Content Still Thin (~409 words)</h3>
 <p>Homepage main content area is ~409 words. Target is 600+ for competitive ITAD keywords. Consider adding:</p>
 <ul>
   <li>Service overview section with keyword-rich descriptions</li>
@@ -100,13 +90,13 @@
   <li>Service area details (Connecticut towns/cities served)</li>
 </ul>
 
-<h3>1d. Services Page Content Slightly Below Target (~710 words)</h3>
+<h3>1c. Services Page Content Slightly Below Target (~710 words)</h3>
 <p>Services page is at ~710 words, close to the 800+ target. Could benefit from slightly expanded service descriptions.</p>
 
-<h3>1e. Phone Number in H3 Tag (All Pages)</h3>
+<h3>1d. Phone Number in H3 Tag (All Pages)</h3>
 <p>The phone number <code>(203) 687-9370</code> is still wrapped in an H3 in the site header. Phone numbers should use a <code>&lt;span&gt;</code> or <code>&lt;p&gt;</code> tag instead of a heading.</p>
 
-<h3>1f. No External Authority Links on Homepage</h3>
+<h3>1e. No External Authority Links on Homepage</h3>
 <p>The homepage only links externally to Google Reviews, LinkedIn, and the developer site. Consider adding links to industry authorities such as:</p>
 <ul>
   <li>R2/RIOS certification bodies</li>
@@ -114,10 +104,10 @@
   <li>NIST data destruction standards</li>
 </ul>
 
-<h3>1g. Open Graph Image Same Across All Pages</h3>
+<h3>1f. Open Graph Image Same Across All Pages</h3>
 <p>Every page uses the same OG image (<code>HTMC1200.jpg</code>). Each page should have a unique, relevant image for better social sharing previews.</p>
 
-<h3>1h. Blog Page Exists but Has No Posts</h3>
+<h3>1g. Blog Page Exists but Has No Posts</h3>
 <p>The <code>/blog/</code> page is live and linked in navigation but contains zero posts and no H1 tag. Either publish blog content or remove the link to avoid a thin/empty page being indexed.</p>
 
 <hr>
@@ -141,6 +131,7 @@
   <tr><td>No caching plugin</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer configured</td></tr>
   <tr><td>About Us thin content (was ~294 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~484 words</td></tr>
   <tr><td>Contact thin content (was ~55 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~337 words</td></tr>
+  <tr><td>Images missing alt text (18+ across site)</td><td><span class="badge badge-good">Fixed</span> &mdash; all content images now have keyword-rich alt text</td></tr>
 </table>
 
 <hr>
@@ -157,7 +148,7 @@
   <tr><td>Word Count</td><td>~409</td><td><span class="badge badge-needs-work">Low (target 600+)</span></td></tr>
   <tr><td>OG Tags</td><td>Complete (title, desc, image, url)</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Schema</td><td>Place, ProfessionalService, Organization, WebSite, WebPage</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>2 of 5</td><td><span class="badge badge-poor">3 missing</span></td></tr>
+  <tr><td>Images w/alt</td><td>5 of 5</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
 
 <h3>Services (/services/)</h3>
@@ -168,7 +159,7 @@
   <tr><td>H1</td><td>"Data Destruction &amp; ITAD Services in Connecticut"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
   <tr><td>Word Count</td><td>~710</td><td><span class="badge badge-fair">Fair (target 800+)</span></td></tr>
   <tr><td>Schema</td><td>ProfessionalService, WebPage, Service, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>2 of 12</td><td><span class="badge badge-poor">10 missing</span></td></tr>
+  <tr><td>Images w/alt</td><td>10 of 10</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
 
 <h3>About Us (/about-us/)</h3>
@@ -179,7 +170,7 @@
   <tr><td>H1</td><td>"Connecticut's Trusted ITAD &amp; Data Destruction Company"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
   <tr><td>Word Count</td><td>~484</td><td><span class="badge badge-fair">Fair (target 500+)</span></td></tr>
   <tr><td>Schema</td><td>ProfessionalService, AboutPage, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>1 of 3</td><td><span class="badge badge-needs-work">2 missing</span></td></tr>
+  <tr><td>Images w/alt</td><td>1 of 1</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
 
 <h3>Contact Us (/contact-us/)</h3>
@@ -191,7 +182,7 @@
   <tr><td>Word Count</td><td>~337</td><td><span class="badge badge-good">Good (was 55)</span></td></tr>
   <tr><td>Schema</td><td>ProfessionalService, ContactPage, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Contact Form</td><td>WPForms present</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>2 of 5</td><td><span class="badge badge-needs-work">3 missing</span></td></tr>
+  <tr><td>Images w/alt</td><td>3 of 3</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
 
 <h3>Service Sub-Page Example: Data Destruction (/services/data-destruction/)</h3>
@@ -202,7 +193,7 @@
   <tr><td>H1</td><td>"Data Destruction"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
   <tr><td>Word Count</td><td>~651</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Schema</td><td>ProfessionalService, WebPage, Service, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>3 of 5</td><td><span class="badge badge-needs-work">2 missing</span></td></tr>
+  <tr><td>Images w/alt</td><td>3 of 3</td><td><span class="badge badge-good">All have alt text</span></td></tr>
 </table>
 
 <hr>
@@ -242,7 +233,6 @@
 
 <h2>6. Priority Action Items</h2>
 <ol>
-  <li><strong>Add alt text to ALL images</strong> &mdash; 18+ images across the site still missing alt text. This is the #1 remaining issue.</li>
   <li><strong>Fix CLS (0.25)</strong> &mdash; preload critical fonts, add <code>font-display: swap</code>, reduce font count, remove affiliate plugin fonts on non-affiliate pages</li>
   <li><strong>Expand homepage content</strong> &mdash; ~409 words, needs 600+ for competitive ITAD keywords</li>
   <li><strong>Change phone number H3 to span/p</strong> &mdash; <code>(203) 687-9370</code> should not be a heading tag</li>
