@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit: hightidemgt.com</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --border: #334155;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --green: #4ade80;
+    --yellow: #facc15;
+    --red: #f87171;
+    --orange: #fb923c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; color: var(--accent); }
+  h2 { font-size: 1.35rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); color: var(--accent); }
+  h3 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text); }
+  p, li { margin-bottom: 0.5rem; }
+  ul, ol { padding-left: 1.5rem; }
+  .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+  .meta span { display: inline-block; margin-right: 1.5rem; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+  th, td { padding: 0.5rem 0.75rem; text-align: left; border: 1px solid var(--border); }
+  th { background: var(--surface); color: var(--accent); font-weight: 600; }
+  td { background: var(--bg); }
+  code { background: var(--surface); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85rem; color: var(--orange); }
+  pre { background: var(--surface); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 0.75rem 0; }
+  pre code { background: none; padding: 0; color: var(--text-muted); }
+  .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+  .badge-good { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge-fair { background: rgba(250,204,21,0.15); color: var(--yellow); }
+  .badge-needs-work { background: rgba(251,146,60,0.15); color: var(--orange); }
+  .badge-poor { background: rgba(248,113,113,0.15); color: var(--red); }
+  .done { text-decoration: line-through; color: var(--text-muted); }
+  .check { color: var(--green); }
+  strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<h1>SEO Audit: hightidemgt.com</h1>
+<div class="meta">
+  <span><strong>Date:</strong> 2026-02-09</span>
+  <span><strong>CMS:</strong> WordPress (Divi + dm-divi-child-theme v1.0)</span>
+  <span><strong>SEO Plugin:</strong> Rank Math</span>
+  <span><strong>Analytics:</strong> GTM + Google Analytics (Site Kit)</span>
+</div>
+
+<h2>Scores at a Glance</h2>
+<table>
+  <tr><th>Area</th><th>Rating</th></tr>
+  <tr><td>Meta Tags &amp; Titles</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Schema Markup</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Heading Structure</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Image Optimization</td><td><span class="badge badge-poor">Poor</span></td></tr>
+  <tr><td>Content Depth</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Internal Linking</td><td><span class="badge badge-fair">Fair</span></td></tr>
+  <tr><td>Core Web Vitals</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Technical SEO</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Sitemap &amp; Robots</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Mobile / Accessibility</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+</table>
+
+<hr>
+
+<h2>1. Critical Issues (Fix Immediately)</h2>
+
+<h3>1a. Robots.txt has a typo in the Sitemap URL</h3>
+<p>The sitemap directive reads:</p>
+<pre><code>Sitemap: hhttps://hightidemgt.com/page-sitemap.xml</code></pre>
+<p><strong>"hhttps"</strong> — double "h". Search engines cannot discover the sitemap. Must be <code>https://</code>.</p>
+
+<h3>1b. Multiple H1 Tags on Homepage &amp; Services Page</h3>
+<ul>
+  <li><strong>Homepage:</strong> 2 H1s — "High Tide Commodities Management" + "Contact us"</li>
+  <li><strong>Services:</strong> 2 H1s — "Our Job is to Make Your Job Easier" + "ELECTRONIC RECYCLING"</li>
+</ul>
+<p>Each page should have exactly <strong>one H1</strong> that contains the primary keyword.</p>
+
+<h3>1c. Nearly All Images Missing Alt Text</h3>
+<table>
+  <tr><th>Page</th><th>Images</th><th>Missing Alt</th></tr>
+  <tr><td>Home</td><td>5</td><td>4 (80%)</td></tr>
+  <tr><td>Services</td><td>10</td><td>10 (100%)</td></tr>
+  <tr><td>About Us</td><td>1</td><td>1 (100%)</td></tr>
+  <tr><td>Contact</td><td>2</td><td>2 (100%)</td></tr>
+</table>
+<p>Only 1 image on the entire site has alt text (the HTCM globe logo). This is a major accessibility and SEO failure.</p>
+
+<h3>1d. "sample-page" Still in Sitemap</h3>
+<p><code>https://hightidemgt.com/sample-page/</code> (the WordPress default) is indexed. Should be noindexed or deleted.</p>
+
+<h3>1e. Affiliate Pages Exposed in Sitemap</h3>
+<p>5 affiliate-related pages are in the sitemap that likely shouldn't be indexed:</p>
+<ul>
+  <li>/become-an-affiliate/</li>
+  <li>/affiliate-tos-page/</li>
+  <li>/affiliate-reset-password/</li>
+  <li>/affiliate-portal/</li>
+  <li>/affiliate-login/</li>
+</ul>
+<p>These should be noindexed or excluded from the sitemap.</p>
+
+<hr>
+
+<h2>2. High Priority (Significant SEO Impact)</h2>
+
+<h3>2a. CLS Score is BAD (0.27)</h3>
+<ul>
+  <li>Threshold: Good &lt; 0.1, Bad &gt; 0.25</li>
+  <li><strong>Root cause:</strong> 11+ web fonts loading and causing layout shifts (Open Sans, Poppins, Roboto, FontAwesome, Divi modules font, affiliate plugin Poppins fonts)</li>
+  <li><strong>Fix:</strong> Add <code>font-display: swap</code> declarations, preload critical fonts, reduce font count, consider <code>size-adjust</code> fallbacks</li>
+</ul>
+
+<h3>2b. Viewport Disables User Zooming</h3>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;</code></pre>
+<p>This is an <strong>accessibility violation</strong> (WCAG 1.4.4) and can negatively affect mobile SEO. Remove <code>maximum-scale=1.0</code> and <code>user-scalable=0</code>.</p>
+
+<h3>2c. Thin Content on Key Pages</h3>
+<table>
+  <tr><th>Page</th><th>Word Count</th><th>Minimum Recommended</th></tr>
+  <tr><td>Home</td><td>~415</td><td>600+</td></tr>
+  <tr><td>About Us</td><td>~294</td><td>500+</td></tr>
+  <tr><td>Contact</td><td>~55</td><td>200+</td></tr>
+  <tr><td>Services</td><td>~683</td><td>800+</td></tr>
+</table>
+<p>About Us and Contact are especially thin. Homepage should be expanded with more keyword-rich content.</p>
+
+<h3>2d. No LocalBusiness Schema</h3>
+<p>The site has generic Organization + Article schema from Rank Math, but <strong>no LocalBusiness schema</strong>. For a CT-based service company, this is critical for local SEO. Should include:</p>
+<ul>
+  <li>Business name, address (119 Montowese St, Branford, CT 06405)</li>
+  <li>Phone number(s)</li>
+  <li>Service area (Connecticut)</li>
+  <li>Business hours</li>
+  <li>Service types</li>
+</ul>
+
+<h3>2e. Schema Shows Article Type on All Pages</h3>
+<p>Every page (including Contact, About, Services) has <code>@type: Article</code> schema. These are not articles — they should be <code>WebPage</code> or <code>Service</code> type. The Article schema is misleading to search engines.</p>
+
+<h3>2f. Author Displayed as Email Address</h3>
+<p>Schema and Twitter meta show the author as <code>chrishauman@gmail.com</code> instead of a proper name. This looks unprofessional in search results and leaks a personal email.</p>
+
+<hr>
+
+<h2>3. Medium Priority (Optimization)</h2>
+
+<h3>3a. Missing Service-Specific Pages</h3>
+<p>The sitemap shows dedicated service pages that are good:</p>
+<ul>
+  <li>/services/data-center-decommissioning/</li>
+  <li>/services/data-destruction/</li>
+  <li>/services/electronic-recycling/</li>
+  <li>/services/it-asset-disposition/</li>
+</ul>
+<p>But these aren't linked from the main nav — the Services dropdown uses anchor links (#CONSULTING, #LOGISTICS, etc.) to jump within the single /services/ page. Consider linking to the dedicated pages in the nav for better crawlability and keyword targeting.</p>
+
+<h3>3b. No Contact Form on Contact Page</h3>
+<p>The Contact page has <strong>zero forms</strong> (0 <code>&lt;form&gt;</code> elements). It only lists phone numbers, email, and addresses. A contact form improves conversions and signals to Google that this is a legitimate contact page.</p>
+
+<h3>3c. Homepage Title Has HTML Entity in Schema</h3>
+<p>Schema shows <code>&amp;amp;</code> instead of <code>&amp;</code> in the headline:</p>
+<pre><code>"headline": "IT Asset Disposition Connecticut | Data Destruction &amp;amp; ITAD"</code></pre>
+
+<h3>3d. Open Graph Image is Same Across All Pages</h3>
+<p>Every page uses the same OG image (<code>HTMC1200.jpg</code>). Each page should ideally have a unique, relevant OG image for better social sharing.</p>
+
+<h3>3e. No External Authority Links on Homepage</h3>
+<p>The homepage has zero outbound links to authoritative industry sources (e.g., R2/RIOS certification bodies, EPA e-waste guidelines, NIST data destruction standards). These help establish topical authority.</p>
+
+<h3>3f. Content Has Typos/Grammar Issues</h3>
+<ul>
+  <li>"assests" &rarr; "assets"</li>
+  <li>"liablities" &rarr; "liabilities"</li>
+  <li>"emlimnate" &rarr; "eliminate"</li>
+  <li>"We Help to Free Up Valuable Team Time but Handling" &rarr; "by Handling"</li>
+</ul>
+
+<h3>3g. Phone Number in H3 Tag (All Pages)</h3>
+<p>The phone number <code>(203) 687-9370</code> is wrapped in an H3 on every page (appears to be in the header/nav). Phone numbers should not be heading tags.</p>
+
+<hr>
+
+<h2>4. Low Priority (Nice to Have)</h2>
+
+<h3>4a. No Blog / Content Marketing</h3>
+<p>No blog posts exist. For ITAD/data destruction, blog content targeting long-tail keywords would help organic traffic:</p>
+<ul>
+  <li>"how to dispose of old servers in Connecticut"</li>
+  <li>"ITAD compliance requirements"</li>
+  <li>"data destruction certificate of destruction"</li>
+</ul>
+
+<h3>4b. Images Served as PNG/JPEG, Not WebP</h3>
+<p>Images are served as .png and .jpeg. Converting to WebP would improve load times.</p>
+
+<h3>4c. No Lazy Loading on Images</h3>
+<p>All images have <code>loading="auto"</code> — none use <code>loading="lazy"</code>. Below-the-fold images should be lazy loaded.</p>
+
+<h3>4d. Missing Breadcrumbs on Service Sub-Pages</h3>
+<p>Schema includes BreadcrumbList on inner pages (good), but visible breadcrumbs would improve UX and internal linking.</p>
+
+<h3>4e. Affiliate Plugin Loading Fonts Site-Wide</h3>
+<p>The "Indeed Affiliate Pro" plugin loads Poppins font files (Medium + Bold) on every page, contributing to CLS and load time, even on non-affiliate pages.</p>
+
+<hr>
+
+<h2>5. Page-by-Page Summary</h2>
+
+<h3>Homepage (/)</h3>
+<table>
+  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
+  <tr><td>Title</td><td>IT Asset Disposition Connecticut | Data Destruction &amp; ITAD</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Meta Desc</td><td>IT asset disposition Connecticut - High Tide offers certified ITAD...</td><td><span class="badge badge-good">Good (155 chars)</span></td></tr>
+  <tr><td>Canonical</td><td>https://hightidemgt.com/</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>H1 Count</td><td>2</td><td><span class="badge badge-poor">Bad — should be 1</span></td></tr>
+  <tr><td>Word Count</td><td>~415</td><td><span class="badge badge-needs-work">Low</span></td></tr>
+  <tr><td>OG Tags</td><td>Complete</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Twitter Card</td><td>summary_large_image</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Schema</td><td>Organization, WebSite, Article, WebPage</td><td><span class="badge badge-needs-work">Needs LocalBusiness</span></td></tr>
+  <tr><td>Images w/alt</td><td>1 of 5</td><td><span class="badge badge-poor">Poor</span></td></tr>
+</table>
+
+<h3>Services (/services/)</h3>
+<table>
+  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
+  <tr><td>Title</td><td>Data Destruction Services Connecticut | ITAD &amp; E-Waste Recycling</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Meta Desc</td><td>Professional data destruction services Connecticut trusts...</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>H1 Count</td><td>2</td><td><span class="badge badge-poor">Bad — should be 1</span></td></tr>
+  <tr><td>Word Count</td><td>~683</td><td><span class="badge badge-fair">Fair</span></td></tr>
+  <tr><td>Images w/alt</td><td>0 of 10</td><td><span class="badge badge-poor">Poor</span></td></tr>
+</table>
+
+<h3>About Us (/about-us/)</h3>
+<table>
+  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
+  <tr><td>Title</td><td>ITAD Company Connecticut | 25+ Years E-Waste Recycling</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Meta Desc</td><td>High Tide is a trusted ITAD company Connecticut relies on...</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>H1 Count</td><td>1</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Word Count</td><td>~294</td><td><span class="badge badge-needs-work">Low</span></td></tr>
+  <tr><td>Images w/alt</td><td>0 of 1</td><td><span class="badge badge-poor">Poor</span></td></tr>
+</table>
+
+<h3>Contact Us (/contact-us/)</h3>
+<table>
+  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
+  <tr><td>Title</td><td>Contact High Tide | Connecticut ITAD &amp; E-Waste Recycling</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Meta Desc</td><td>Get a free quote for IT asset disposition...</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>H1 Count</td><td>1</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>Word Count</td><td>~55</td><td><span class="badge badge-poor">Very Low</span></td></tr>
+  <tr><td>Images w/alt</td><td>0 of 2</td><td><span class="badge badge-poor">Poor</span></td></tr>
+  <tr><td>Contact Form</td><td>None</td><td><span class="badge badge-poor">Bad</span></td></tr>
+</table>
+
+<hr>
+
+<h2>6. Core Web Vitals (Lab Data)</h2>
+<table>
+  <tr><th>Metric</th><th>Value</th><th>Rating</th></tr>
+  <tr><td>LCP</td><td>538ms</td><td><span class="badge badge-good">Good</span></td></tr>
+  <tr><td>CLS</td><td>0.27</td><td><span class="badge badge-poor">Bad (&gt;0.25)</span></td></tr>
+  <tr><td>TTFB</td><td>199ms</td><td><span class="badge badge-good">Good</span></td></tr>
+</table>
+<p><strong>LCP breakdown:</strong> TTFB 199ms + Load Delay 230ms + Load Duration 5ms + Render Delay 105ms</p>
+
+<hr>
+
+<h2>7. Technical Checklist</h2>
+<table>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>SSL/HTTPS</td><td><span class="badge badge-good">Yes</span></td></tr>
+  <tr><td>Canonical tags</td><td><span class="badge badge-good">Yes, all pages</span></td></tr>
+  <tr><td>robots.txt</td><td><span class="badge badge-poor">Has typo in sitemap URL</span></td></tr>
+  <tr><td>XML Sitemap</td><td><span class="badge badge-needs-work">Exists but includes junk pages</span></td></tr>
+  <tr><td>Rank Math SEO</td><td><span class="badge badge-good">Installed</span></td></tr>
+  <tr><td>Google Analytics</td><td><span class="badge badge-good">Yes (GTM)</span></td></tr>
+  <tr><td>Favicon</td><td><span class="badge badge-good">Yes</span></td></tr>
+  <tr><td>HTML lang attribute</td><td><span class="badge badge-good">en-US</span></td></tr>
+  <tr><td>Mixed content</td><td><span class="badge badge-good">None</span></td></tr>
+  <tr><td>Mobile responsive</td><td><span class="badge badge-good">Yes (Divi)</span></td></tr>
+  <tr><td>User-scalable</td><td><span class="badge badge-poor">Disabled (bad)</span></td></tr>
+  <tr><td>404 page</td><td><span class="badge badge-needs-work">Not tested</span></td></tr>
+  <tr><td>Page speed caching</td><td><span class="badge badge-needs-work">No WP Rocket or similar detected</span></td></tr>
+</table>
+
+<hr>
+
+<h2>Priority Action Items</h2>
+<ol>
+  <li class="done">Fix robots.txt — "hhttps" &rarr; "https" <span class="check">&check;</span></li>
+  <li class="done">Fix H1 tags — one per page, keyword-focused <span class="check">&check;</span></li>
+  <li><strong>Add alt text to ALL images</strong> — keyword-rich, descriptive (recommendations provided)</li>
+  <li class="done">Add LocalBusiness schema — via Rank Math Local SEO (Professional Service, full address/phone/hours) <span class="check">&check;</span></li>
+  <li class="done">Fix viewport meta — removed user-scalable=0 via child theme functions.php <span class="check">&check;</span></li>
+  <li class="done">Remove/noindex sample-page and affiliate pages — 6 pages set to noindex/nofollow <span class="check">&check;</span></li>
+  <li class="done">Fix author name — changed from email to "Chris Hauman" <span class="check">&check;</span></li>
+  <li class="done">Fix Article schema on Pages — changed default Pages schema from Article to None <span class="check">&check;</span></li>
+  <li class="done">Fix typos — fixed "but Handling" &rarr; "by Handling" (other 3 already resolved) <span class="check">&check;</span></li>
+  <li class="done">Add contact form — WPForms Lite "Simple Contact Form" (ID 2367) added to Contact page <span class="check">&check;</span></li>
+  <li><strong>Expand thin content</strong> — Home to 600+, About to 500+, Contact to 200+</li>
+  <li><strong>Fix CLS</strong> — preload fonts, reduce font count, add font-display:swap</li>
+  <li class="done">Add lazy loading — already enabled via SiteGround Speed Optimizer <span class="check">&check;</span></li>
+  <li class="done">Convert images to WebP — already enabled via SiteGround Speed Optimizer <span class="check">&check;</span></li>
+  <li class="done">Link to service sub-pages — added as sub-items under Services in main nav <span class="check">&check;</span></li>
+  <li class="done">Install a caching plugin — SiteGround Speed Optimizer already fully configured <span class="check">&check;</span></li>
+</ol>
+
+</body>
+</html>
