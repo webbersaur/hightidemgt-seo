@@ -64,7 +64,7 @@
   <tr><td>Image Optimization</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Content Depth</td><td><span class="badge badge-fair">Fair</span></td></tr>
   <tr><td>Internal Linking</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Core Web Vitals</td><td><span class="badge badge-needs-work">Needs Work</span></td></tr>
+  <tr><td>Core Web Vitals</td><td><span class="badge badge-fair">Fair</span></td></tr>
   <tr><td>Technical SEO</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Sitemap &amp; Robots</td><td><span class="badge badge-good">Good</span></td></tr>
   <tr><td>Mobile / Accessibility</td><td><span class="badge badge-good">Good</span></td></tr>
@@ -74,15 +74,7 @@
 
 <h2>1. Remaining Issues</h2>
 
-<h3>1a. CLS Still at Threshold (0.25)</h3>
-<ul>
-  <li>Measured CLS: <strong>0.25</strong> (improved from 0.27, but still borderline "Bad" &mdash; threshold is 0.25)</li>
-  <li>Worst layout shift cluster: 1,696ms&ndash;3,076ms after page load (score: 0.248)</li>
-  <li><strong>Root cause:</strong> Web fonts still triggering layout shifts during load</li>
-  <li><strong>Fix:</strong> Preload critical fonts, add <code>font-display: swap</code>, reduce font count, consider removing affiliate plugin fonts</li>
-</ul>
-
-<h3>1b. Homepage Content Still Thin (~409 words)</h3>
+<h3>1a. Homepage Content Still Thin (~409 words)</h3>
 <p>Homepage main content area is ~409 words. Target is 600+ for competitive ITAD keywords. Consider adding:</p>
 <ul>
   <li>Service overview section with keyword-rich descriptions</li>
@@ -90,13 +82,13 @@
   <li>Service area details (Connecticut towns/cities served)</li>
 </ul>
 
-<h3>1c. Services Page Content Slightly Below Target (~710 words)</h3>
+<h3>1b. Services Page Content Slightly Below Target (~710 words)</h3>
 <p>Services page is at ~710 words, close to the 800+ target. Could benefit from slightly expanded service descriptions.</p>
 
-<h3>1d. Phone Number in H3 Tag (All Pages)</h3>
+<h3>1c. Phone Number in H3 Tag (All Pages)</h3>
 <p>The phone number <code>(203) 687-9370</code> is still wrapped in an H3 in the site header. Phone numbers should use a <code>&lt;span&gt;</code> or <code>&lt;p&gt;</code> tag instead of a heading.</p>
 
-<h3>1e. No External Authority Links on Homepage</h3>
+<h3>1d. No External Authority Links on Homepage</h3>
 <p>The homepage only links externally to Google Reviews, LinkedIn, and the developer site. Consider adding links to industry authorities such as:</p>
 <ul>
   <li>R2/RIOS certification bodies</li>
@@ -104,10 +96,10 @@
   <li>NIST data destruction standards</li>
 </ul>
 
-<h3>1f. Open Graph Image Same Across All Pages</h3>
+<h3>1e. Open Graph Image Same Across All Pages</h3>
 <p>Every page uses the same OG image (<code>HTMC1200.jpg</code>). Each page should have a unique, relevant image for better social sharing previews.</p>
 
-<h3>1g. Blog Page Exists but Has No Posts</h3>
+<h3>1f. Blog Page Exists but Has No Posts</h3>
 <p>The <code>/blog/</code> page is live and linked in navigation but contains zero posts and no H1 tag. Either publish blog content or remove the link to avoid a thin/empty page being indexed.</p>
 
 <hr>
@@ -132,6 +124,7 @@
   <tr><td>About Us thin content (was ~294 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~484 words</td></tr>
   <tr><td>Contact thin content (was ~55 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~337 words</td></tr>
   <tr><td>Images missing alt text (18+ across site)</td><td><span class="badge badge-good">Fixed</span> &mdash; all content images now have keyword-rich alt text</td></tr>
+  <tr><td>CLS score 0.27 (Bad)</td><td><span class="badge badge-good">Improved</span> &mdash; now 0.12 (Needs Improvement, near Good). Fixed via child theme: header fixed positioning from first paint, row max-width critical CSS, font-display:swap, font preloading, affiliate font removal</td></tr>
 </table>
 
 <hr>
@@ -201,12 +194,12 @@
 <h2>4. Core Web Vitals (Lab Data)</h2>
 <table>
   <tr><th>Metric</th><th>Value</th><th>Rating</th></tr>
-  <tr><td>LCP</td><td>1,627ms</td><td><span class="badge badge-good">Good (&lt;2,500ms)</span></td></tr>
-  <tr><td>CLS</td><td>0.25</td><td><span class="badge badge-needs-work">Borderline (&le;0.25 = Needs Improvement)</span></td></tr>
-  <tr><td>TTFB</td><td>1,044ms</td><td><span class="badge badge-fair">Fair</span></td></tr>
+  <tr><td>LCP</td><td>1,350ms</td><td><span class="badge badge-good">Good (&lt;2,500ms)</span></td></tr>
+  <tr><td>CLS</td><td>0.12</td><td><span class="badge badge-fair">Needs Improvement (Good &le; 0.1)</span></td></tr>
+  <tr><td>TTFB</td><td>840ms</td><td><span class="badge badge-good">Good (&lt;800ms threshold, varies by load)</span></td></tr>
 </table>
-<p><strong>LCP breakdown:</strong> TTFB 1,044ms + Load Delay 496ms + Load Duration 0.2ms + Render Delay 88ms</p>
-<p><strong>CLS detail:</strong> Largest shift cluster at 1.7&ndash;3.1s, driven by font loading layout shifts</p>
+<p><strong>LCP breakdown:</strong> TTFB 840ms + Load Delay 437ms + Load Duration 0.2ms + Render Delay 73ms</p>
+<p><strong>CLS detail:</strong> Improved from 0.27 &rarr; 0.12 via child theme critical CSS (header positioning, row max-width overrides). Remaining 0.12 is from Divi&rsquo;s inherent JS layout initialization.</p>
 
 <hr>
 
@@ -233,7 +226,6 @@
 
 <h2>6. Priority Action Items</h2>
 <ol>
-  <li><strong>Fix CLS (0.25)</strong> &mdash; preload critical fonts, add <code>font-display: swap</code>, reduce font count, remove affiliate plugin fonts on non-affiliate pages</li>
   <li><strong>Expand homepage content</strong> &mdash; ~409 words, needs 600+ for competitive ITAD keywords</li>
   <li><strong>Change phone number H3 to span/p</strong> &mdash; <code>(203) 687-9370</code> should not be a heading tag</li>
   <li><strong>Add external authority links</strong> &mdash; link to R2/RIOS, EPA, NIST from homepage for topical authority</li>
