@@ -16,7 +16,7 @@
 | Image Optimization | Good |
 | Content Depth | Good |
 | Internal Linking | Good |
-| Core Web Vitals | Fair |
+| Core Web Vitals | Good |
 | Technical SEO | Good |
 | Sitemap & Robots | Good |
 | Mobile / Accessibility | Good |
@@ -34,8 +34,6 @@ Services page is at ~710 words, close to the 800+ target. Could benefit from sli
 
 | Issue | Status |
 |-------|--------|
-| Robots.txt sitemap URL typo ("hhttps") | ✅ Fixed |
-| Multiple H1 tags on Homepage & Services | ✅ Fixed — all pages now have exactly 1 H1 |
 | Viewport disabling user zoom | ✅ Fixed — now `width=device-width, initial-scale=1.0` |
 | sample-page & affiliate pages in sitemap | ✅ Fixed — removed from sitemap |
 | Author shown as email address | ✅ Fixed — now "Chris Hauman" |
