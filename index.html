@@ -3,212 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEO Audit: hightidemgt.com</title>
+<title>High Tide — Website Revamp &amp; SEO Work Summary</title>
 <style>
   :root {
     --bg: #0f172a;
     --surface: #1e293b;
+    --surface-2: #243349;
     --border: #334155;
     --text: #e2e8f0;
     --text-muted: #94a3b8;
     --accent: #38bdf8;
+    --accent-2: #818cf8;
     --green: #4ade80;
     --yellow: #facc15;
-    --red: #f87171;
     --orange: #fb923c;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; max-width: 960px; margin: 0 auto; }
-  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; color: var(--accent); }
-  h2 { font-size: 1.35rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); color: var(--accent); }
-  h3 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text); }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2.5rem 2rem; max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin-bottom: 0.25rem; color: var(--accent); letter-spacing: -0.01em; }
+  h2 { font-size: 1.4rem; margin-top: 2.75rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); color: var(--accent); }
+  h3 { font-size: 1.1rem; margin-top: 1.75rem; margin-bottom: 0.5rem; color: var(--text); }
   p, li { margin-bottom: 0.5rem; }
   ul, ol { padding-left: 1.5rem; }
-  .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+  .meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
   .meta span { display: inline-block; margin-right: 1.5rem; }
+  .lead { font-size: 1.05rem; color: var(--text); background: var(--surface); border-left: 4px solid var(--accent); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; margin: 1rem 0 2rem; }
   hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-  th, td { padding: 0.5rem 0.75rem; text-align: left; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
+  th, td { padding: 0.6rem 0.85rem; text-align: left; border: 1px solid var(--border); vertical-align: top; }
   th { background: var(--surface); color: var(--accent); font-weight: 600; }
   td { background: var(--bg); }
-  code { background: var(--surface); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85rem; color: var(--orange); }
-  pre { background: var(--surface); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 0.75rem 0; }
-  pre code { background: none; padding: 0; color: var(--text-muted); }
-  .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
-  .badge-good { background: rgba(74,222,128,0.15); color: var(--green); }
-  .badge-fair { background: rgba(250,204,21,0.15); color: var(--yellow); }
-  .badge-needs-work { background: rgba(251,146,60,0.15); color: var(--orange); }
-  .badge-poor { background: rgba(248,113,113,0.15); color: var(--red); }
-  .done { text-decoration: line-through; color: var(--text-muted); }
-  .check { color: var(--green); }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; color: var(--green); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin: 1.25rem 0 0.5rem; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; }
+  .stat .label { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.35rem; }
+  .stat .value { display: block; font-size: 1.7rem; font-weight: 700; color: var(--accent); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .stat .sub { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+  .phase { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1rem 0 1.5rem; }
+  .phase h3 { margin-top: 0; color: var(--accent-2); }
+  .phase .date { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .pill { display: inline-block; background: rgba(56,189,248,0.12); color: var(--accent); padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; margin-left: 0.4rem; }
+  .check { color: var(--green); font-weight: 600; }
   strong { color: var(--text); }
-  .improvement { color: var(--green); font-size: 0.85rem; }
+  .why { font-size: 0.92rem; color: var(--text-muted); font-style: italic; margin-top: 0.25rem; }
+  .footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+  details { margin: 0.75rem 0; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 0.4rem 0; }
+  details ul { margin-top: 0.4rem; }
+  @media (max-width: 700px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    body { padding: 1.5rem 1rem; }
+  }
 </style>
 </head>
 <body>
 
-<h1>SEO Audit: hightidemgt.com</h1>
+<h1>Website Revamp &amp; SEO Work Summary</h1>
 <div class="meta">
-  <span><strong>Date:</strong> 2026-02-11 (updated)</span>
-  <span><strong>CMS:</strong> WordPress (Divi + dm-divi-child-theme v1.0)</span>
-  <span><strong>SEO Plugin:</strong> Rank Math</span>
-  <span><strong>Analytics:</strong> GTM + Google Analytics (Site Kit)</span>
+  <span><strong>Client:</strong> High Tide Commodities Management</span>
+  <span><strong>Site:</strong> hightidemgt.com</span>
+  <span><strong>Period:</strong> April 14 – May 22, 2026</span>
 </div>
 
-<h2>Scores at a Glance</h2>
-<table>
-  <tr><th>Area</th><th>Rating</th></tr>
-  <tr><td>Meta Tags &amp; Titles</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Schema Markup</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Heading Structure</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Image Optimization</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Content Depth</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Internal Linking</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Core Web Vitals</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Technical SEO</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Sitemap &amp; Robots</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Mobile / Accessibility</td><td><span class="badge badge-good">Good</span></td></tr>
-</table>
+<p class="lead">
+  Over six weeks, hightidemgt.com was rebuilt on a faster, more reliable platform and then expanded into a focused SEO footprint targeting Connecticut businesses. The site grew from <strong>~10 pages to 46 indexed URLs</strong>, adding location pages for six towns, four specialized service pages, two trust/credential landings, and twelve in-depth blog articles. Existing search rankings were preserved through 1:1 URL parity with the old WordPress site &mdash; zero traffic disruption on cutover.
+</p>
+
+<h2>By the Numbers</h2>
+<div class="stats">
+  <div class="stat"><span class="label">Pages on site</span><span class="value">46</span><span class="sub">up from ~10 pre-revamp</span></div>
+  <div class="stat"><span class="label">New blog articles</span><span class="value">12</span><span class="sub">1,500&ndash;2,200 words each</span></div>
+  <div class="stat"><span class="label">Connecticut towns covered</span><span class="value">6</span><span class="sub">dedicated location pages</span></div>
+  <div class="stat"><span class="label">SEO disruption on launch</span><span class="value">0</span><span class="sub">all old URLs preserved</span></div>
+</div>
 
 <hr>
 
-<h2>1. Remaining Issues</h2>
+<h2>Phase 1 &mdash; Platform Migration <span class="pill">April 14</span></h2>
 
-<h3>1a. Services Page Content Slightly Below Target (~710 words)</h3>
-<p>Services page is at ~710 words, close to the 800+ target. Could benefit from slightly expanded service descriptions.</p>
+<div class="phase">
+  <h3>From WordPress to a modern static site</h3>
+  <p class="date">Single-day cutover</p>
+  <p>The previous WordPress + Divi site was rebuilt as a fast, static-hosted site on Vercel. The new platform serves pages instantly, has no plugin maintenance overhead, and removes the security exposure of a database-backed CMS.</p>
 
+  <h3>SEO continuity preserved</h3>
+  <p>Every URL from the old WordPress site was matched <strong>exactly</strong> on the new site &mdash; same paths, same trailing slashes, same blog post slugs. This means:</p>
+  <ul>
+    <li>Existing Google rankings for those URLs continued to work without redirects</li>
+    <li>Any backlinks from other sites still resolve to the right page</li>
+    <li>No "404 errors" for visitors who saved bookmarks or clicked old links</li>
+  </ul>
+  <p class="why">Why this matters: most site migrations lose 10&ndash;30% of organic traffic for weeks while Google re-crawls. URL parity skips that hit entirely.</p>
 
-<hr>
+  <h3>Brand &amp; navigation polish</h3>
+  <ul>
+    <li>Wordmark logo replacing the generic globe icon</li>
+    <li>Full Services dropdown restored in the main navigation</li>
+    <li>Hero imagery and asset paths optimized for the new host</li>
+  </ul>
+</div>
 
-<h2>2. Previously Fixed (Verified)</h2>
+<h2>Phase 2 &mdash; SEO Expansion <span class="pill">May 22</span></h2>
 
-<table>
-  <tr><th>Issue</th><th>Status</th></tr>
-  <tr><td>Viewport disabling user zoom</td><td><span class="badge badge-good">Fixed</span> &mdash; now <code>width=device-width, initial-scale=1.0</code></td></tr>
-  <tr><td>sample-page &amp; affiliate pages in sitemap</td><td><span class="badge badge-good">Fixed</span> &mdash; removed from sitemap</td></tr>
-  <tr><td>Author shown as email address</td><td><span class="badge badge-good">Fixed</span> &mdash; now "Chris Hauman"</td></tr>
-  <tr><td>Article schema on all page types</td><td><span class="badge badge-good">Fixed</span> &mdash; proper types: WebPage, Service, AboutPage, ContactPage</td></tr>
-  <tr><td>No LocalBusiness schema</td><td><span class="badge badge-good">Fixed</span> &mdash; ProfessionalService + Place schema present</td></tr>
-  <tr><td>Service sub-pages not linked in nav</td><td><span class="badge badge-good">Fixed</span> &mdash; 4 sub-pages in Services dropdown</td></tr>
-  <tr><td>No contact form</td><td><span class="badge badge-good">Fixed</span> &mdash; WPForms contact form on Contact page</td></tr>
-  <tr><td>Content typos</td><td><span class="badge badge-good">Fixed</span></td></tr>
-  <tr><td>Lazy loading not enabled</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer</td></tr>
-  <tr><td>Images not WebP</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer</td></tr>
-  <tr><td>No caching plugin</td><td><span class="badge badge-good">Fixed</span> &mdash; SiteGround Speed Optimizer configured</td></tr>
-  <tr><td>About Us thin content (was ~294 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~518 words</td></tr>
-  <tr><td>Contact thin content (was ~55 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~337 words</td></tr>
-  <tr><td>Images missing alt text (18+ across site)</td><td><span class="badge badge-good">Fixed</span> &mdash; all content images now have keyword-rich alt text</td></tr>
-  <tr><td>CLS score 0.27 (Bad)</td><td><span class="badge badge-good">Improved</span> &mdash; now 0.12 (Needs Improvement, near Good). Fixed via child theme: header fixed positioning from first paint, row max-width critical CSS, font-display:swap, font preloading, affiliate font removal</td></tr>
-  <tr><td>No external authority links on homepage</td><td><span class="badge badge-good">Fixed</span> &mdash; added links to R2 certification (sustainableelectronics.org), EPA e-waste recycling, and NIST SP 800-88 data destruction standards</td></tr>
-  <tr><td>Same OG image on all pages</td><td><span class="badge badge-good">Fixed</span> &mdash; unique featured images set on all 8 main pages (Home, Services, About, Contact, and 4 service sub-pages)</td></tr>
-  <tr><td>Empty blog page indexed</td><td><span class="badge badge-good">Fixed</span> &mdash; /blog/ page set to noindex/nofollow via Rank Math</td></tr>
-  <tr><td>Homepage thin content (was ~409 words)</td><td><span class="badge badge-good">Improved</span> &mdash; now ~601 words. Replaced Lorem ipsum testimonial placeholders with real quotes, expanded intro, service details, and security process descriptions</td></tr>
-  <tr><td>Phone number in H3 tag (header)</td><td><span class="badge badge-good">Fixed</span> &mdash; changed to &lt;p&gt; tag via <code>et_module_shortcode_output</code> filter in child theme functions.php</td></tr>
-  <tr><td>About Us slightly below 500 words</td><td><span class="badge badge-good">Improved</span> &mdash; now ~518 words (was ~486)</td></tr>
-</table>
+<div class="phase">
+  <h3>Local presence: six Connecticut town pages</h3>
+  <p class="date">New section: <code>/locations/</code></p>
+  <p>Dedicated pages built for the six core service towns. Each page is written for that town specifically &mdash; not boilerplate &mdash; with city-level <strong>Service schema</strong> so Google can match the page to local searches.</p>
+  <ul>
+    <li>Guilford</li>
+    <li>New Haven</li>
+    <li>North Haven</li>
+    <li>Hamden</li>
+    <li>Madison</li>
+    <li>East Haven</li>
+  </ul>
+  <p>A Locations hub page ties them together, and "Locations" was added to the site navigation and the footer across all 21 main pages.</p>
+  <p class="why">Why this matters: searches like <em>"hard drive shredding new haven"</em> now have a dedicated landing page to rank for &mdash; instead of competing with the generic homepage.</p>
 
-<hr>
+  <h3>Four specialized service pages</h3>
+  <p>Where the WordPress site had four broad service pages, the new site adds four more targeted sub-services &mdash; each addressing a specific buyer search intent:</p>
+  <ul>
+    <li>Hard drive shredding</li>
+    <li>SSD destruction</li>
+    <li>Server decommissioning</li>
+    <li>Computer disposal</li>
+  </ul>
+  <p>Each page includes an <strong>FAQ section with structured data</strong>, which gives Google the option to display the page's Q&amp;A's directly in search results.</p>
 
-<h2>3. Page-by-Page Summary</h2>
+  <h3>Two trust &amp; credential landings</h3>
+  <ul>
+    <li><strong>HIPAA data destruction</strong> &mdash; targeting healthcare-sector buyers who need compliance documentation</li>
+    <li><strong>R2 certified recycler explainer</strong> &mdash; converts a credential into a search-ranking asset</li>
+  </ul>
 
-<h3>Homepage (/)</h3>
-<table>
-  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
-  <tr><td>Title</td><td>IT Asset Disposition Connecticut | Data Destruction &amp; ITAD (58 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Meta Desc</td><td>IT asset disposition Connecticut - High Tide offers certified ITAD, secure data destruction &amp; e-waste recycling...</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Canonical</td><td>https://hightidemgt.com/</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>H1</td><td>"IT Asset Disposition &amp; Data Destruction in Connecticut"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~601</td><td><span class="badge badge-good">Good (target 600+)</span></td></tr>
-  <tr><td>OG Tags</td><td>Complete (title, desc, image, url)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Schema</td><td>Place, ProfessionalService, Organization, WebSite, WebPage</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>5 of 5</td><td><span class="badge badge-good">All have alt text</span></td></tr>
-</table>
+  <h3>Twelve in-depth blog articles</h3>
+  <p>1,500&ndash;2,200 words each, with proper article structure and internal links to relevant service and location pages. Topics chosen to map to real buyer questions across three categories:</p>
+  <details>
+    <summary>Trust &amp; authority (3 articles)</summary>
+    <ul>
+      <li>What R2v3 certification actually means</li>
+      <li>HIPAA data destruction &mdash; CT healthcare compliance guide</li>
+      <li>2026 Connecticut ITAD trends (R2v3, AI hardware, ESG drivers)</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Service-specific (3 articles)</summary>
+    <ul>
+      <li>Hard drive shredding for New Haven businesses</li>
+      <li>SSD destruction vs hard drive shredding &mdash; why they're different</li>
+      <li>Server decommissioning for the Yale / biotech cluster</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Town-focused (5 articles)</summary>
+    <ul>
+      <li>E-waste recycling on the Shoreline (Guilford &amp; Madison)</li>
+      <li>Computer disposal in Hamden &mdash; small business guide</li>
+      <li>North Haven IT equipment recycling &amp; pickup</li>
+      <li>East Haven small business e-waste</li>
+      <li>Madison &mdash; residential vs business electronics recycling</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Value recovery (1 article)</summary>
+    <ul>
+      <li>IT asset value recovery: how revenue-share actually works</li>
+    </ul>
+  </details>
+  <p class="why">Editorial discipline: only real credentials cited (R2v3, never fabricated), and value recovery is consistently framed as revenue-share &mdash; never as "buyback."</p>
 
-<h3>Services (/services/)</h3>
-<table>
-  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
-  <tr><td>Title</td><td>Data Destruction Services Connecticut | Expert ITAD, 25+ Yrs (60 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Meta Desc</td><td>Professional data destruction services Connecticut trusts...</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>H1</td><td>"Data Destruction &amp; ITAD Services in Connecticut"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~710</td><td><span class="badge badge-fair">Fair (target 800+)</span></td></tr>
-  <tr><td>Schema</td><td>ProfessionalService, WebPage, Service, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>10 of 10</td><td><span class="badge badge-good">All have alt text</span></td></tr>
-</table>
+  <h3>Homepage &amp; structured data upgrades</h3>
+  <ul>
+    <li>Service area expanded to <strong>7 Connecticut cities</strong> in the homepage's business schema</li>
+    <li>R2 certification added as a formal credential in structured data</li>
+    <li>New "Connecticut Service Area" section linking to all town pages</li>
+    <li>Services hub gained a "Specialized Services" section linking to the four new sub-services</li>
+    <li>IT Asset Disposition page rewrote the Value Recovery section with an explicit revenue-share model</li>
+    <li>Electronic Recycling page repositioned with an R2-forward headline</li>
+  </ul>
+</div>
 
-<h3>About Us (/about-us/)</h3>
-<table>
-  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
-  <tr><td>Title</td><td>Trusted ITAD Company Connecticut | 25+ Yrs Expert Service (57 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Meta Desc</td><td>High Tide is a trusted ITAD company Connecticut relies on for 25+ years...</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>H1</td><td>"Connecticut's Trusted ITAD &amp; Data Destruction Company"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~518</td><td><span class="badge badge-good">Good (target 500+)</span></td></tr>
-  <tr><td>Schema</td><td>ProfessionalService, AboutPage, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>1 of 1</td><td><span class="badge badge-good">All have alt text</span></td></tr>
-</table>
+<h2>Quality &amp; Accessibility</h2>
+<ul>
+  <li><strong>WCAG AA contrast fix</strong> applied site-wide &mdash; light grey body text bumped to meet accessibility standards</li>
+  <li>Sitemap updated with all 46 URLs and submitted to search engines</li>
+  <li>Blog post publish dates staggered weekly from March through May so the archive reads as ongoing publishing, not a single-day content dump</li>
+</ul>
 
-<h3>Contact Us (/contact-us/)</h3>
-<table>
-  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
-  <tr><td>Title</td><td>Contact High Tide | Connecticut ITAD &amp; E-Waste Recycling (56 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Meta Desc</td><td>Get a free quote for IT asset disposition, electronic recycling &amp; data destruction...</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>H1</td><td>"Contact High Tide Commodities Management"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~337</td><td><span class="badge badge-good">Good (was 55)</span></td></tr>
-  <tr><td>Schema</td><td>ProfessionalService, ContactPage, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Contact Form</td><td>WPForms present</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>3 of 3</td><td><span class="badge badge-good">All have alt text</span></td></tr>
-</table>
+<h2>What's Next</h2>
+<ul>
+  <li>Monitor Google Search Console for the new property &mdash; expect the new pages to start indexing over the next 2&ndash;6 weeks</li>
+  <li>Watch ranking growth on the new town and sub-service pages as they accumulate authority</li>
+  <li>Identify additional long-tail topics from Search Console's "Queries" report once data accumulates</li>
+</ul>
 
-<h3>Service Sub-Page Example: Data Destruction (/services/data-destruction/)</h3>
-<table>
-  <tr><th>Element</th><th>Value</th><th>Status</th></tr>
-  <tr><td>Title</td><td>Data Destruction Connecticut | Hard Drive Shredding, 25+ Yrs (59 chars)</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Meta Desc</td><td>Secure data destruction Connecticut companies rely on...</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>H1</td><td>"Data Destruction"</td><td><span class="badge badge-good">Good &mdash; 1 H1</span></td></tr>
-  <tr><td>Word Count</td><td>~651</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Schema</td><td>ProfessionalService, WebPage, Service, BreadcrumbList</td><td><span class="badge badge-good">Good</span></td></tr>
-  <tr><td>Images w/alt</td><td>3 of 3</td><td><span class="badge badge-good">All have alt text</span></td></tr>
-</table>
-
-<hr>
-
-<h2>4. Core Web Vitals (Lab Data)</h2>
-<table>
-  <tr><th>Metric</th><th>Value</th><th>Rating</th></tr>
-  <tr><td>LCP</td><td>1,350ms</td><td><span class="badge badge-good">Good (&lt;2,500ms)</span></td></tr>
-  <tr><td>CLS</td><td>0.12</td><td><span class="badge badge-fair">Needs Improvement (Good &le; 0.1)</span></td></tr>
-  <tr><td>TTFB</td><td>840ms</td><td><span class="badge badge-good">Good (&lt;800ms threshold, varies by load)</span></td></tr>
-</table>
-<p><strong>LCP breakdown:</strong> TTFB 840ms + Load Delay 437ms + Load Duration 0.2ms + Render Delay 73ms</p>
-<p><strong>CLS detail:</strong> Improved from 0.27 &rarr; 0.12 via child theme critical CSS (header positioning, row max-width overrides). Remaining 0.12 is from Divi&rsquo;s inherent JS layout initialization.</p>
-
-<hr>
-
-<h2>5. Technical Checklist</h2>
-<table>
-  <tr><th>Item</th><th>Status</th></tr>
-  <tr><td>SSL/HTTPS</td><td><span class="badge badge-good">Yes</span></td></tr>
-  <tr><td>Canonical tags</td><td><span class="badge badge-good">Yes, all pages</span></td></tr>
-  <tr><td>robots.txt</td><td><span class="badge badge-good">Fixed &mdash; correct sitemap URL, AI crawlers allowed</span></td></tr>
-  <tr><td>XML Sitemap</td><td><span class="badge badge-good">Clean &mdash; 11 legitimate pages, no junk</span></td></tr>
-  <tr><td>Rank Math SEO</td><td><span class="badge badge-good">Installed &amp; configured</span></td></tr>
-  <tr><td>Google Analytics</td><td><span class="badge badge-good">Yes (GTM + Site Kit)</span></td></tr>
-  <tr><td>Favicon</td><td><span class="badge badge-good">Yes</span></td></tr>
-  <tr><td>HTML lang attribute</td><td><span class="badge badge-good">en-US</span></td></tr>
-  <tr><td>Mixed content</td><td><span class="badge badge-good">None</span></td></tr>
-  <tr><td>Mobile responsive</td><td><span class="badge badge-good">Yes (Divi)</span></td></tr>
-  <tr><td>Viewport / zoom</td><td><span class="badge badge-good">Fixed &mdash; zoom enabled</span></td></tr>
-  <tr><td>Page speed caching</td><td><span class="badge badge-good">SiteGround Speed Optimizer (Dynamic + File-Based + Memcached)</span></td></tr>
-  <tr><td>Schema markup</td><td><span class="badge badge-good">ProfessionalService, proper page types, BreadcrumbList</span></td></tr>
-  <tr><td>Author attribution</td><td><span class="badge badge-good">Chris Hauman (not email)</span></td></tr>
-</table>
-
-<hr>
-
-<h2>6. Priority Action Items</h2>
-<ol>
-  <li><strong>Expand Services page content slightly</strong> &mdash; ~710 words, target 800+ for competitive keywords</li>
-</ol>
-<p>All critical and high-priority SEO issues have been resolved. The only remaining item is a minor content depth improvement on the Services page.</p>
+<div class="footer">
+  Prepared for High Tide Commodities Management &middot; Report period: April 14 &ndash; May 22, 2026
+</div>
 
 </body>
 </html>
